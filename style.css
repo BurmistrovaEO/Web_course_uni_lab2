@@ -1,0 +1,61 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 100%;
+    line-height: 1.5em;
+    
+    min-width: 1000px;
+}
+
+body{
+  margin: 0, auto;
+}
+
+.container{
+  margin: 0 auto;
+}
+
+.name-catalog{
+  text-align: center;
+}
+
+.catalog{
+  margin: 5em;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col{
+  padding: 40px 0 0 0;
+  width: 14%;
+  line-height: 0.5;
+  text-align: center;
+}
+
+@media(max-width: 1100px){
+  .col{
+    width: 25%;
+  }
+}
+
+@media(max-width: 900px){
+  .col{
+    width: 50%;
+  }
+}
+
+
+@media(min-width: 1500px){
+  .col{
+    width: 11%;
+  }
+}
+
+@media(min-width: 1800px){
+  .col{
+    width: 11%;
+  }
+}
+

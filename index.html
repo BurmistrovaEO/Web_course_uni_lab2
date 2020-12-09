@@ -9,104 +9,147 @@
     <body>
         <div class="container">
             <div  class = "name-catalog"> <a name="catalog">Товары</a> </div>
-            <div class="row">
+            <div class="row" id="row">
                 <div class="col">
                     <a href="pizza1.html"  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <div><img id="first" src="11.jpg" alt="Три сыра"></div>
+                    </a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
                         
                 <div class="col">
                     <a href=""  title="Пепперони">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <div><img id="second" src="11.jpg" alt="Пепперони"></div></a>
                     <p>Пепперони</p>
                     <p>от 380 &#8381</p>
                 </div>
                 
                 <div class="col">
                     <a href=""  title="Гавайская">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <div><img id="third" src="11.jpg" alt="Гавайская"></div></a>
                     <p>Гавайская</p>
                     <p>от 380 &#8381</p>
                 </div>
                 
                 <div class="col">
                     <a href=""  title="Грибная">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <div><img id="forth" src="11.jpg" alt="Грибная"></div></a>
                     <p>Грибная</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
                     <a href=""  title="Пицца-пирог">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <div><img id="fifth" src="11.jpg" alt="Пицца-пирог"></div></a>
                     <p>Пицца-пирог</p>
                     <p>от 380 &#8381</p>
                 </div>
                 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца">
+                    <div><img id="sixth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца1">
+                    <div><img id="seventh" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца2">
+                    <div><img id="eigth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца3">
+                    <div><img id="ninth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца4">
+                    <div><img id="tenth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца5">
+                    <div><img id="eleventh" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца6">
+                    <div><img id="twelvth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца7">
+                    <div><img id="thirteenth" src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
 
                 <div class="col">
-                    <a href=""  title="Три сыра">
-                    <div><img src="11.jpg" alt="Три сыра"></div></a>
+                    <a href=""  title="Пицца8">
+                    <div><img id="fourteenth"src="11.jpg" alt="Три сыра"></div></a>
                     <p>Три сыра</p>
                     <p>от 380 &#8381</p>
                 </div>
-            </div>      
+            </div>     
         </div>
+        <script>
+        let pizza = [];
+        let imgs = [];
+        imgs.push(first.getAttribute('Src'));
+        imgs.push(second.getAttribute('Src'));
+        imgs.push(third.getAttribute('Src'));
+        imgs.push(forth.getAttribute('Src'));
+        imgs.push(fifth.getAttribute('Src'));
+        imgs.push(sixth.getAttribute('Src'));
+        imgs.push(seventh.getAttribute('Src'));
+        imgs.push(eigth.getAttribute('Src'));
+        imgs.push(ninth.getAttribute('Src'));
+        imgs.push(tenth.getAttribute('Src'));
+        imgs.push(eleventh.getAttribute('Src'));
+        imgs.push(twelvth.getAttribute('Src'));
+        imgs.push(thirteenth.getAttribute('Src'));
+        imgs.push(fourteenth.getAttribute('Src'));
+            //alert(typeof pizza);    
+        pizza.push(first.getAttribute('Alt'));
+        pizza.push(second.getAttribute('Alt'));
+        pizza.push(third.getAttribute('Alt'));
+        pizza.push(forth.getAttribute('Alt'));
+        pizza.push(fifth.getAttribute('Alt'));
+        pizza.push(sixth.getAttribute('Alt'));
+        pizza.push(seventh.getAttribute('Alt'));
+        pizza.push(eigth.getAttribute('Alt'));
+        pizza.push(ninth.getAttribute('Alt'));
+        pizza.push(tenth.getAttribute('Alt'));
+        pizza.push(eleventh.getAttribute('Alt'));
+        pizza.push(twelvth.getAttribute('Alt'));
+        pizza.push(thirteenth.getAttribute('Alt'));
+        pizza.push(fourteenth.getAttribute('Alt'));
+            
+        //alert(imgs);        
+        //alert(pizzas[0].title);
+        //var imgs = document.querySelector('[src="element src attribute value"]');
+        let myData = [pizza,imgs];
+        //alert(myData);
+        sessionStorage.setItem('myArray', JSON.stringify(myData));
+        //localStorage.setItem( 'objectToPass', myData);
+    </script>  
     </body>
+ 

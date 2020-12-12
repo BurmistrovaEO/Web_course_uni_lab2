@@ -2,6 +2,27 @@
 <html land = "ru">
     <head>
         <meta charset="utf-8">
-        <title> Пицца5 </title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style5.css">
+        <script>
+            //alert("Hello");
+            let myArray = sessionStorage.getItem('myArray');
+            //sessionStorage.clear();
+            let myObject = JSON.parse(myArray);
+            alert(myObject[0][4]);
+            let pizza_type= myObject[0][4];
+            let pizza_picture = myObject[1][4];
+        </script>
     </head>
+    <body onload="set_attr();">
+        <div class="image">
+            <img id="fifth" src="" title="">
+        </div>        
+        <script type="text/javascript">
+            function set_attr()
+            {
+                //var fieldValue= document.getElementById('first').value;
+                document.getElementById("fifth").setAttribute('src',pizza_picture);
+                document.getElementById("fifth").setAttribute('title',pizza_type);                
+            }
+        </script>
+    </body>

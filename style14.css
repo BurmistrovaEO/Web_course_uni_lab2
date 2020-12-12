@@ -1,0 +1,19 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 100%;
+    line-height: 1.5em;
+    
+    min-width: 1000px;
+}
+
+body{
+  margin: 0, auto;
+}
+
+#fourteenth{
+    width:600px;
+    height:550px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}

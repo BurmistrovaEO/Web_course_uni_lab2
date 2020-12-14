@@ -33,18 +33,25 @@
         }
 
     </script>
-        <script>
-        function plus(Element) {
-            //document.getElementByClassName("counter").setAttribute('value',count);
-            let count = Number(Element.value);
-            Element.value = String(count + 1);
+    <script>
+        function plus(ElementId) {
+            let count = document.getElementById(ElementId).value;
+            count = Number(count) + 1;
+            count = String(count);
+            document.getElementById(ElementId).setAttribute('value', count);
+            console.log(count);
+            console.log(ElementId);
         }
 
-        function minus(Element) {
-            if (Element.value >= 1) {
-                //document.getElementByClassName("counter").setAttribute('value',count);
-                let count = Number(Element.value);
-                Element.value = String(count - 1);
+        function minus(ElementId) {
+            //console.log(Element);
+            let count = document.getElementById(ElementId).value;
+            if (count >= 1) {
+                count = Number(count) - 1;
+                count = String(count);
+                document.getElementById(ElementId).setAttribute('value', count);
+                console.log(count);
+                console.log(ElementId);
             }
         }
 
@@ -74,30 +81,31 @@
     Дополнительные ингредиенты<br>
     <div id="Ingr_2">
         <div class='main'>
-            <button onclick="minus(this);" class='down_count btn btn-info' title='Down'>-</button>
+            <button onclick='minus("counter");' class='down_count btn btn-info' title='Down'>-</button>
             <input class='counter' id="counter" type="text" placeholder="value..." value='0'>
-            <button onclick="plus(this);" class='up_count btn btn-info' title='Up'>+</button>
+            <button onclick='plus("counter");' class='up_count btn btn-info' title='Up'>+</button>
             <label for="Mush">Грибы</label>
         </div>
         <div class='main'>
-            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <button onclick='minus("counter2");' class='down_count btn btn-info' title='Down'>-</button>
             <input class='counter' id="counter2" type="text" placeholder="value..." value='0'>
-            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <button onclick='plus("counter2");' class='up_count btn btn-info' title='Up'>+</button>
             <label for="Oliv">Маслины</label>
         </div>
         <div class='main'>
-            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <button onclick='minus("counter3");' class='down_count btn btn-info' title='Down'>-</button>
             <input class='counter' id="counter3" type="text" placeholder="value..." value='0'>
-            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <button onclick='plus("counter3");' class='up_count btn btn-info' title='Up'>+</button>
             <label for="Pineap">Ананас</label>
         </div>
         <div class='main'>
-            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <button onclick='minus("counter4");' class='down_count btn btn-info' title='Down'>-</button>
             <input class='counter' id="counter4" type="text" placeholder="value..." value='0'>
-            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <button onclick='plus("counter4");' class='up_count btn btn-info' title='Up'>+</button>
             <label for="Chee">Соус Сырный</label>
         </div>
     </div>
+
     <script>
         document.getElementById('type').innerHTML = pizza_type;
 

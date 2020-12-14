@@ -52,3 +52,9 @@ body {
     //border-top-right-radius: 0px;
     //border-bottom-right-radius: 0px;
 }
+.submit_button {
+    height: 30px;
+    position: absolute;
+    left: 8px;
+    bottom: 40px;
+}

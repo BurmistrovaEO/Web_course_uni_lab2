@@ -1,28 +1,126 @@
 <!DOCTYPE html>
-<html land = "ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style3.css">
-        <script>
-            //alert("Hello");
-            let myArray = sessionStorage.getItem('myArray');
-            //sessionStorage.clear();
-            let myObject = JSON.parse(myArray);
-            alert(myObject[0][2]);
-            let pizza_type= myObject[0][2];
-            let pizza_picture = myObject[1][2];
-        </script>
-    </head>
-    <body onload="set_attr();">
-        <div class="image">
-            <img id="third" src="" title="">
-        </div>        
-        <script type="text/javascript">
-            function set_attr()
-            {
-                //var fieldValue= document.getElementById('first').value;
-                document.getElementById("third").setAttribute('src',pizza_picture);
-                document.getElementById("third").setAttribute('title',pizza_type);                
+<html land="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        //alert("Hello");
+        let myArray = sessionStorage.getItem('myArray');
+        //sessionStorage.clear();
+        let myObject = JSON.parse(myArray);
+        alert(myObject[0][2]);
+        let pizza_type = myObject[0][2];
+        let pizza_picture = myObject[1][2];
+        let base = 380;
+        let add = 59;
+        let tmp = base;
+        let tmp2 = 0;
+        let tmp3 = 0;
+        let tmp4 = 0;
+
+    </script>
+</head>
+
+<body onload="set_attr();">
+    <div class="image">
+        <img id="first" src="" title="">
+    </div>
+    <script type="text/javascript">
+        function set_attr() {
+            //var fieldValue= document.getElementById('first').value;
+            document.getElementById("first").setAttribute('src', pizza_picture);
+            document.getElementById("first").setAttribute('title', pizza_type);
+            //let myData = [0,0,0,0];
+            //sessionStorage.setItem('valArr', JSON.stringify(myData));
+        }
+
+    </script>
+    <script>
+        function plus(ElementId) {
+            let count = document.getElementById(ElementId).value;
+            count = Number(count) + 1;
+            tmp += add;
+            count = String(count);
+            document.getElementById(ElementId).setAttribute('value', count);
+            document.getElementsByName('total')[0].setAttribute('value', tmp);
+            console.log(count);
+            console.log(ElementId);
+            console.log(tmp);
+        }
+
+        function minus(ElementId) {
+            //console.log(Element);
+            let count = document.getElementById(ElementId).value;
+            if (count >= 1) {
+                count = Number(count) - 1;
+                tmp -= add;
+                count = String(count);
+                document.getElementById(ElementId).setAttribute('value', count);
+                document.getElementsByName('total')[0].setAttribute('value', tmp);
+                console.log(count);
+                console.log(ElementId);
+                console.log(tmp);
+
             }
-        </script>
-    </body>
+        }
+
+    </script>
+    <p id="first_t"><span id="type">pizza_type</span></p>
+    Основные ингредиенты<br>
+    <div id="Ingr_1">
+        <div>
+            <input type="checkbox" id="Carbonara_sauce" name="tick" value="chosen" checked>
+            <label for="Carbonara_sauce">Соус Карбонара</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Mozz" name="tick" value="chosen" checked>
+            <label for="Mozz">Сыр Моцарелла</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Parm" name="tick" value="chosen" checked>
+            <label for="Parm">Сыр Пармезан</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Ched" name="tick" value="chosen" checked>
+            <label for="Ched">Сыр Чеддер(тёртый)</label>
+        </div>
+    </div>
+    <br>
+    <br>
+    Дополнительные ингредиенты<br>
+    <div id="Ingr_2">
+        <div class='main'>
+            <button onclick='minus("counter");' class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter" type="text" placeholder="value..." value='0'>
+            <button onclick='plus("counter");' class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Mush">Грибы</label>
+        </div>
+        <div class='main'>
+            <button onclick='minus("counter2");' class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter2" type="text" placeholder="value..." value='0'>
+            <button onclick='plus("counter2");' class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Oliv">Маслины</label>
+        </div>
+        <div class='main'>
+            <button onclick='minus("counter3");' class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter3" type="text" placeholder="value..." value='0'>
+            <button onclick='plus("counter3");' class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Pineap">Ананас</label>
+        </div>
+        <div class='main'>
+            <button onclick='minus("counter4");' class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter4" type="text" placeholder="value..." value='0'>
+            <button onclick='plus("counter4");' class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Chee">Соус Сырный</label>
+        </div>
+    </div>
+    <br>
+    Стоимость:<br>
+    <input name='total' placeholder="380" value="380" disabled>
+    <button onclick='submit();' class='submit_button' title='Submit'>Оформить заказ</button>
+    <script>
+        document.getElementById('type').innerHTML = pizza_type;
+
+    </script>
+</body>

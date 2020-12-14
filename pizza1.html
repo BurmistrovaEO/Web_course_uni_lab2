@@ -12,8 +12,9 @@
         //alert(myObject[0][0]);
         let pizza_type = myObject[0][0];
         let pizza_picture = myObject[1][0];
+        let base = 380;
         let add = 59;
-        let tmp1 = 0;
+        let tmp = base;
         let tmp2 = 0;
         let tmp3 = 0;
         let tmp4 = 0;
@@ -30,6 +31,8 @@
             //var fieldValue= document.getElementById('first').value;
             document.getElementById("first").setAttribute('src', pizza_picture);
             document.getElementById("first").setAttribute('title', pizza_type);
+            //let myData = [0,0,0,0];
+            //sessionStorage.setItem('valArr', JSON.stringify(myData));
         }
 
     </script>
@@ -37,10 +40,13 @@
         function plus(ElementId) {
             let count = document.getElementById(ElementId).value;
             count = Number(count) + 1;
+            tmp += add;
             count = String(count);
             document.getElementById(ElementId).setAttribute('value', count);
+            document.getElementsByName('total')[0].setAttribute('value', tmp);
             console.log(count);
             console.log(ElementId);
+            console.log(tmp);
         }
 
         function minus(ElementId) {
@@ -48,10 +54,14 @@
             let count = document.getElementById(ElementId).value;
             if (count >= 1) {
                 count = Number(count) - 1;
+                tmp -= add;
                 count = String(count);
                 document.getElementById(ElementId).setAttribute('value', count);
+                document.getElementsByName('total')[0].setAttribute('value', tmp);
                 console.log(count);
                 console.log(ElementId);
+                console.log(tmp);
+
             }
         }
 
@@ -105,7 +115,10 @@
             <label for="Chee">Соус Сырный</label>
         </div>
     </div>
-
+    <br>
+    Стоимость:<br>
+    <input name='total' placeholder="380" value="380" disabled>
+    <button onclick='submit();' class='submit_button' title='Submit'>Оформить заказ</button>
     <script>
         document.getElementById('type').innerHTML = pizza_type;
 

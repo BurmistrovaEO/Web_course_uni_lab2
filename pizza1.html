@@ -1,28 +1,105 @@
 <!DOCTYPE html>
-<html land = "ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style1.css">
+<html land="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        //alert("Hello");
+        let myArray = sessionStorage.getItem('myArray');
+        //sessionStorage.clear();
+        let myObject = JSON.parse(myArray);
+        //alert(myObject[0][0]);
+        let pizza_type = myObject[0][0];
+        let pizza_picture = myObject[1][0];
+        let add = 59;
+        let tmp1 = 0;
+        let tmp2 = 0;
+        let tmp3 = 0;
+        let tmp4 = 0;
+
+    </script>
+</head>
+
+<body onload="set_attr();">
+    <div class="image">
+        <img id="first" src="" title="">
+    </div>
+    <script type="text/javascript">
+        function set_attr() {
+            //var fieldValue= document.getElementById('first').value;
+            document.getElementById("first").setAttribute('src', pizza_picture);
+            document.getElementById("first").setAttribute('title', pizza_type);
+        }
+
+    </script>
         <script>
-            //alert("Hello");
-            let myArray = sessionStorage.getItem('myArray');
-            //sessionStorage.clear();
-            let myObject = JSON.parse(myArray);
-            alert(myObject[0][0]);
-            let pizza_type= myObject[0][0];
-            let pizza_picture = myObject[1][0];
-        </script>
-    </head>
-    <body onload="set_attr();">
-        <div class="image">
-            <img id="first" src="" title="">
-        </div>        
-        <script type="text/javascript">
-            function set_attr()
-            {
-                //var fieldValue= document.getElementById('first').value;
-                document.getElementById("first").setAttribute('src',pizza_picture);
-                document.getElementById("first").setAttribute('title',pizza_type);                
+        function plus(Element) {
+            //document.getElementByClassName("counter").setAttribute('value',count);
+            let count = Number(Element.value);
+            Element.value = String(count + 1);
+        }
+
+        function minus(Element) {
+            if (Element.value >= 1) {
+                //document.getElementByClassName("counter").setAttribute('value',count);
+                let count = Number(Element.value);
+                Element.value = String(count - 1);
             }
-        </script>
-    </body>
+        }
+
+    </script>
+    <p id="first_t"><span id="type">pizza_type</span></p>
+    Основные ингредиенты<br>
+    <div id="Ingr_1">
+        <div>
+            <input type="checkbox" id="Carbonara_sauce" name="tick" value="chosen" checked>
+            <label for="Carbonara_sauce">Соус Карбонара</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Mozz" name="tick" value="chosen" checked>
+            <label for="Mozz">Сыр Моцарелла</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Parm" name="tick" value="chosen" checked>
+            <label for="Parm">Сыр Пармезан</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Ched" name="tick" value="chosen" checked>
+            <label for="Ched">Сыр Чеддер(тёртый)</label>
+        </div>
+    </div>
+    <br>
+    <br>
+    Дополнительные ингредиенты<br>
+    <div id="Ingr_2">
+        <div class='main'>
+            <button onclick="minus(this);" class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter" type="text" placeholder="value..." value='0'>
+            <button onclick="plus(this);" class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Mush">Грибы</label>
+        </div>
+        <div class='main'>
+            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter2" type="text" placeholder="value..." value='0'>
+            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Oliv">Маслины</label>
+        </div>
+        <div class='main'>
+            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter3" type="text" placeholder="value..." value='0'>
+            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Pineap">Ананас</label>
+        </div>
+        <div class='main'>
+            <button onclick="minus(this)" class='down_count btn btn-info' title='Down'>-</button>
+            <input class='counter' id="counter4" type="text" placeholder="value..." value='0'>
+            <button onclick="plus(this)" class='up_count btn btn-info' title='Up'>+</button>
+            <label for="Chee">Соус Сырный</label>
+        </div>
+    </div>
+    <script>
+        document.getElementById('type').innerHTML = pizza_type;
+
+    </script>
+</body>

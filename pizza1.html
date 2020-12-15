@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style1.css">
+
     <script>
         //alert("Hello");
         let myArray = sessionStorage.getItem('myArray');
@@ -117,10 +118,10 @@
     </div>
     <br>
     Стоимость:<br>
-    <input name='total' placeholder="380" value="380" disabled>
-    <button onclick='submit();' class='submit_button' title='Submit'>Оформить заказ</button>
+    <input name='total' placeholder="380" value="380" disabled />
+    <a href="checkout.html"  title="Оформление" class='submit_button'><button onclick='submit();' title='Submit'>Оформить заказ</button></a>
+    <a title="Отменить" class='submit_button1'><button onclick="history.back();" title='Go_back'>Изменить выбор</button></a>    
     <script>
         document.getElementById('type').innerHTML = pizza_type;
-
     </script>
 </body>

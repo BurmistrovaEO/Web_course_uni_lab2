@@ -1,0 +1,68 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 100%;
+    line-height: 1.5em;
+
+    min-width: 1000px;
+}
+
+body {
+    margin: 0, auto;
+}
+
+#first {
+    width: 600px;
+    height: 550px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+#first_t {
+    font-family: x-locale-heading-primary, zillaslab, Palatino, "Palatino Linotype", x-locale-heading-secondary, serif;
+    font-size: 40pt;
+}
+
+.main {
+    margin-left: 5px;
+}
+
+.counter {
+    width: 45px;
+    border-radius: 0px !important;
+    text-align: center;
+}
+
+.up_count {
+    height: 20px;
+    margin-bottom: 8px;
+    margin-left: -4px;
+    border-radius: 5px;
+    background-color: lightgray;
+    //border-top-left-radius: 0px;
+    //border-bottom-left-radius: 0px;
+}
+
+.down_count {
+    height: 20px;
+    margin-bottom: 8px;
+    margin-right: -4px;
+    border-radius: 5px;
+    background-color: lightgray;
+    //border-top-right-radius: 0px;
+    //border-bottom-right-radius: 0px;
+}
+
+.submit_button {
+    height: 50px;
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+}
+
+.submit_button1 {
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+}

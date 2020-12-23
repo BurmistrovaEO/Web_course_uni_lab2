@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html land="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title> Пицца </title>
+    <link rel="stylesheet" href="/stylesheets/style_check.css">
+</head>
+
+<body>
+    <div class="form" method="POST">
+        <div class="name-catalog"> <a name="catalog">Оформление заказа</a> </div>
+        <br>
+        <div class="field">
+            <label for="n">Имя </label>
+            <input name='name' class='text_input' type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя" value=''>
+        </div>
+        <div class="field">
+            <label for="su">Фамилия </label>
+            <input name='surname' class='text_input' type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Фамилия" value=''>
+        </div>
+        <div class="field">
+            <label for="ad">Адрес </label>
+            <input name='address' class='text_input' type="text" placeholder="Адрес" value=''>
+        </div>
+        <div class="field">
+            <label for="tel">Телефон </label>
+            <input name='phone' class='text_input' type="text" pattern="2[0-9]{3}[0-9]{3}" placeholder="Телефон" value=''>
+        </div>
+        <br>
+        <button id="show" class='submit_button' title='Submit'>Оформить заказ</button>       
+    <dialog id="dialog">
+        <p>Оставить отзыв:</p>
+        <p><textarea name="comment" cols=65 rows=6></textarea></p>
+        <p><button id="send">Отправить</button></p>
+        <p><button id="close">Закрыть</button></p>
+    </dialog>
+    <a title="Отменить" class='submit_button'><button onclick="history.back();" title='Go_back'>Назад</button></a>
+    </div>
+    <script type=text/javascript>
+        let dialog = document.getElementById('dialog');
+        document.getElementById('show').onclick = function() {
+            dialog.showModal();
+        };
+        document.getElementById('close').onclick = function() {
+            dialog.close();
+        };
+
+    </script>
+
+</body>

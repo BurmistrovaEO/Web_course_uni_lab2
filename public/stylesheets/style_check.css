@@ -10,7 +10,7 @@ body {
     width: 400px;
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     float: left;
 }
@@ -34,22 +34,6 @@ label {
     font-size: 150%;
 }
 
-#dialog {
-    //background: #fce9c0;
-    /* Цвет фона */
-    border: 2px solid #a9c358;
-    /* Параметры рамки */
-    padding: 5px;
-    /* Поля */
-    width: 500px;
-    /* Ширина */
-    height: 200px;
-    /* Высота */
-    box-sizing: border-box;
-    /* Алгоритм расчёта ширины */
-    font-size: 14px;
-    /* Размер шрифта */
-}
 .comment {
     max-width: width: 150%; /* Ширина поля в процентах */
     max-height:  height: 200px; /* Высота поля в пикселах */

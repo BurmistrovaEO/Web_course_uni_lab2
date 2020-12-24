@@ -113,7 +113,8 @@
     Стоимость:<br>
     <input id='tot' name='total' placeholder="380" value="380" disabled />
     <a href='/create' title="Оформление" class='submit_button'><button onclick='get_att();submit();' title='Submit'>Оформить заказ</button></a>
-    <a title="Отменить" class='submit_button1'><button onclick="history.back();"     <script>
+    <a title="Отменить" class='submit_button1'><button onclick="history.back();" title='Go_back'>Изменить выбор</button></a>
+    <script>
         document.getElementById('type').innerHTML = pizza_type;
         let total;
 
